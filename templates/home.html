@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<style>
+    body {
+        background: url("{% static 'mysite/IMG_4678.JPG' %}") no-repeat;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+    }
+
+    .title {
+        color: black;
+        text-align: center;
+    }
+</style>
+<!-- Home page, contain the name my name and a profile pictures -->
+<main class="content__main" style="height: 500px; max-height: 100%; padding: 2% 0%; margin: 0 auto 22% auto; overflow: auto;">
+    <body>
+        <div class="container">
+            <h2 class="title">Thawng Hmung</h2>
+        </div>
+    </body>
+</main>
+{% endblock %}

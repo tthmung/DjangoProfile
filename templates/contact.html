@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Add icon library -->
+<link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
+
+<style>
+    h1{
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: initial;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        visibility: visible;
+    }
+
+    .center {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        align-content: center;
+        gap: 10px;
+        top: 50%;
+    }
+
+    i {
+        color: black;
+    }
+
+    body {
+        background-color: beige;
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
+<!-- Contact, special font from htmlcolorcodes.com, and icons from fontawesomeness-->
+<main class="content__main" style="height: 500px; margin: 0 auto 22% auto; overflow: auto;">
+    <body>
+        <h1 style="top: 43%;">🆃🅷🅰🆆🅽🅶 🅷🅼🆄🅽🅶</h1>
+        <div>
+            <div class="center">
+                <!-- link to education gmail-->
+                <a href="mailto: tthmung@mtu.edu">
+                    <i class="fas fa-envelope-square"></i>
+                </a>
+                <!-- Link to profile on linkedin-->
+                <a href="https://www.linkedin.com/in/thawng-hmung">
+                    <i class = "fab fa-linkedin"></i>
+                </a>
+                <!-- Link to profile on github-->
+                <a href="https://github.com/tthmung">
+                    <i class="fab fa-github-square"></i>
+                </a>
+            </div>
+        </div>
+    </body>
+</main>
+{% endblock %}
