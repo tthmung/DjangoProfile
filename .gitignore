@@ -1,6 +1,6 @@
 # Ignore configuration files that may contain sensitive information
 .env
-mysite/settings/prod.py
+DjangoProfile/settings/prod.py
 
 # Database
 collected_static/mysite*
