@@ -1,0 +1,10 @@
+# Ignore configuration files that may contain sensitive information
+.env
+mysite/settings/prod.py
+
+# Database
+collected_static/mysite*
+staticfiles/mysite*
+media/*
+
+db.sqlite3
