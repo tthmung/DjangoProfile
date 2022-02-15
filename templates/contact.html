@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
 
 <style>
-    h1{
+/*    h1{
         overflow: hidden;
         position: absolute;
         width: 100%;
@@ -17,7 +17,7 @@
         justify-content: center;
         margin: auto;
         visibility: visible;
-    }
+    }*/
 
     .center {
         overflow: hidden;
@@ -30,37 +30,49 @@
         font-size: 60px;
         align-content: center;
         gap: 10px;
-        top: 50%;
     }
 
-    i {
+    #contact_icon {
         color: black;
     }
 
-    body {
+    body.contact_container {
         background-color: beige;
-        width: 100%;
+        width: auto;
         height: 100%;
+    }
+
+    div.container4 {
+        height: 10em;
+        position: relative;
+    }
+    div.container4{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
     }
 
 </style>
 <!-- Contact, special font from htmlcolorcodes.com, and icons from fontawesomeness-->
-<main class="content__main" style="height: 500px; margin: 0 auto 22% auto; overflow: auto;">
-    <body>
-        <h1 style="top: 43%;">🆃🅷🅰🆆🅽🅶 🅷🅼🆄🅽🅶</h1>
-        <div>
+<main style="height: 425px; margin: 0 auto 22% auto; overflow: auto;">
+    <body class="contact_container">
+        <div class="container4">
+            <h1 style="overflow: hidden;">🆃🅷🅰🆆🅽🅶 🅷🅼🆄🅽🅶</h1>
             <div class="center">
                 <!-- link to education gmail-->
                 <a href="mailto: tthmung@mtu.edu">
-                    <i class="fas fa-envelope-square"></i>
+                    <i id="contact_icon" class="fas fa-envelope-square"></i>
                 </a>
                 <!-- Link to profile on linkedin-->
                 <a href="https://www.linkedin.com/in/thawng-hmung">
-                    <i class = "fab fa-linkedin"></i>
+                    <i id="contact_icon" class = "fab fa-linkedin"></i>
                 </a>
                 <!-- Link to profile on github-->
                 <a href="https://github.com/tthmung">
-                    <i class="fab fa-github-square"></i>
+                    <i id="contact_icon" class="fab fa-github-square"></i>
                 </a>
             </div>
         </div>

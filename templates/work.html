@@ -1,27 +1,26 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
 <style>
-    .justify-content-center {
-        padding: 0.5% 15%;
-        width: 100%;
-        height: 100%;
-    }
 
     .element {
         flex-direction: column-reverse;
     }
+
 </style>
-<body style="background-color: antiquewhite; position: sticky;">
+<div style="background-color: antiquewhite; position: sticky; height: 100%; padding-top: 5%;">
     {% for item in items %}
     <!-- Justify center of flex about item and its pictures -->
-    <div class="d-flex justify-content-center" style="margin: 0;">
+    <div class="row" style="margin: 0; padding-right: 20%; padding-left: 10%; margin-bottom: 1%;"> <div class="col">
         <!-- The item description -->
-        <div class="first_split">
+        <div class="col-md-8">
             <h1>{{ item.company_name }}</h1>
             <h2>{{ item.position_name }}, {{ item.date_started }} - {{ item.date_ended }}</h2>
             <p>{{ item.position_detail }}</p>
         </div>
-        <div class="second_split">
+    </div>
+        <div class="col-md-4 align-middle text-center">
             <!-- The pictures corresponding to the item-->
             <div class="row">
                 <!-- Boothstrap Carousal Control -->
@@ -81,5 +80,5 @@
         </div>
     </div>
     {% endfor %}
-</body>
+</div>
 {% endblock %}

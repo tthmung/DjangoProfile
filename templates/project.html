@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
 <style>
     .justify-content-center {
@@ -9,18 +11,24 @@
         flex: 1;
         margin-right: 5px;
     }
+
+    .project_div {
+        height: 100%;
+        padding-top: 5%;
+    }
 </style>
 
-<body style="background-color: #76d7c4; position: sticky;">
+<div class="project_div" style="background-color: #dce6ad; position: sticky;">
     {% for pid in post %}
     <!-- Justify center of flex about item and its pictures -->
-    <div class="d-flex justify-content-center" style="margin: 0;">
+     <div class="row" style="margin: 0; padding-right: 20%; padding-left: 10%; margin-bottom: 1%;"> <div class="col">
         <!-- The item description -->
-        <div class="split_right">
+        <div class="col-md-8">
             <h1>{{ pid.project_name }}</h1>
             <p>{{ pid.project_detail }}</p>
         </div>
-        <div class="split_left">
+        </div>
+        <div class="col-md-4 align-middle text-center">
             <!-- The pictures corresponding to the item-->
             <div class="row">
                 <!-- Boothstrap Carousal Control -->
@@ -75,5 +83,5 @@
         </div>
     </div>
     {% endfor %}
-</body>
+</div>
 {% endblock %}
