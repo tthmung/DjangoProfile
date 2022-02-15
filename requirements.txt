@@ -3,3 +3,4 @@ django-static-fontawesome==5.14.0.0
 django-cleanup==5.2.0
 python-dotenv==0.19.2
 pillow==8.4.0
+
