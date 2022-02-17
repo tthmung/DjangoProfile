@@ -2,80 +2,46 @@
 {% load static %}
 {% block content %}
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <!-- Add icon library -->
 <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
 
 <style>
-/*    h1{
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        height: initial;
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        visibility: visible;
-    }*/
-
-    .center {
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 60px;
-        align-content: center;
-        gap: 10px;
-    }
-
     #contact_icon {
         color: black;
     }
 
-    body.contact_container {
-        background-color: beige;
-        width: auto;
-        height: 100%;
+    .contact_link:hover {
+        background-color: None;
     }
-
-    div.container4 {
-        height: 10em;
-        position: relative;
+    .jumbotron {
+        background: rgba(204, 204, 204, 0.2);
     }
-    div.container4{
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-
 </style>
+
 <!-- Contact, special font from htmlcolorcodes.com, and icons from fontawesomeness-->
-<main style="height: 425px; margin: 0 auto 22% auto; overflow: auto;">
-    <body class="contact_container">
-        <div class="container4">
-            <h1 style="overflow: hidden;">🆃🅷🅰🆆🅽🅶 🅷🅼🆄🅽🅶</h1>
-            <div class="center">
+<div class="bg-image" style=" background-image: url('{% static 'mysite/field-sunset.jpg' %}'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100vh">
+    <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+        <div class="jumbotron my-auto">
+          <h1 class="text-black display-3 mb-0">🆃🅷🅰🆆🅽🅶 🅷🅼🆄🅽🅶</h1>
+            <div class="g-start-2 " style="font-size: 60px; text-align: center;">
                 <!-- link to education gmail-->
-                <a href="mailto: tthmung@mtu.edu">
+                <a class="contact_link" href="mailto: tthmung@mtu.edu">
                     <i id="contact_icon" class="fas fa-envelope-square"></i>
                 </a>
                 <!-- Link to profile on linkedin-->
-                <a href="https://www.linkedin.com/in/thawng-hmung">
+                <a class="contact_link" href="https://www.linkedin.com/in/thawng-hmung">
                     <i id="contact_icon" class = "fab fa-linkedin"></i>
                 </a>
                 <!-- Link to profile on github-->
-                <a href="https://github.com/tthmung">
+                <a class="contact_link" href="https://github.com/tthmung">
                     <i id="contact_icon" class="fab fa-github-square"></i>
                 </a>
-            </div>
+          </div>
         </div>
-    </body>
-</main>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+
 {% endblock %}
