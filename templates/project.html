@@ -2,86 +2,67 @@
 {% load static %}
 {% block content %}
 
-<style>
-    .justify-content-center {
-        padding: 0.5% 15%;
-    }
-
-    .split_right {
-        flex: 1;
-        margin-right: 5px;
-    }
-
-    .project_div {
-        height: 100%;
-        padding-top: 5%;
-    }
-</style>
-
-<div class="project_div" style="background-color: #dce6ad; position: sticky;">
-    {% for pid in post %}
-    <!-- Justify center of flex about item and its pictures -->
-     <div class="row" style="margin: 0; padding-right: 20%; padding-left: 10%; margin-bottom: 1%;"> <div class="col">
-        <!-- The item description -->
-        <div class="col-md-8">
+<div style="background-color: #dce6ad; position: sticky; padding-bottom: 1%; padding-top: 2%;">
+   {% for pid in post %}
+   <!-- Justify center of flex about item and its pictures -->
+   <div class="row" style="margin: 0; padding-right: 20%; padding-left: 10%; margin-bottom: 1%;">
+      <div class="col">
+         <!-- The item description -->
+         <div class="col-md-8">
             <h1>{{ pid.project_name }}</h1>
             <p>{{ pid.project_detail }}</p>
-        </div>
-        </div>
-        <div class="col-md-4 align-middle text-center">
-            <!-- The pictures corresponding to the item-->
-            <div class="row">
-                <!-- Boothstrap Carousal Control -->
-                {% comment %} https://getbootstrap.com/docs/4.0/components/carousel/ {% endcomment %}
-                <div id="{{ forloop.counter }} project_carousel" class="carousel slide" data-interval="false">
-
-                    <style>
-                        .carousel-control-next-icon,
-                        .carousel-control-prev-icon {
-                            background-color: black;
-                            border-radius: 10px;
-                        }
-
-                        .carousel-indicators {
-                            background-color: #000000e6;
-                            overflow: hidden;
-                            height: 10px;
-                            border-radius: 4px;
-                            width: fit-content;
-                            border-top: groove;
-                            border-top-color: black;
-                            margin: 0 auto;
-                        }
-                    </style>
-
-                    <div class="carousel-inner {{ forloop.counter }}" style="width: 500px;">
-                        {% for pic in pid.proj_pics.all %}
-                        <div class="carousel-item{% if forloop.first %} active{% endif %}">
-                            <img class="d-block w-100" src="{% if pic is not None and pic.images is not None %}{{pic.images.url}}{% else %}{% static 'mysite/imagenotfound.png' %}{% endif %}" class="img-fluid" alt="" style="height: 500px; border: 2px solid black; border-radius: 15px; object-fit: contain;">
-                        </div>
-                        {% endfor %}
-                    </div>
-                    {% if pid.proj_pics.count != 1 %}
-
-                    <ol class="carousel-indicators {{ forloop.counter }}">
-                        {% for pic in pid.proj_pics.all %}
-                        <li data-target="#{{ forloop.counter }} project_carousel" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %} class="active" {% endif %}></li>
-                        {% endfor %}
-                    </ol>
-
-                    <a class="carousel-control-prev {{ forloop.counter }}" href="#{{ forloop.counter }} project_carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon {{ forloop.counter }}" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#{{ forloop.counter }} project_carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon {{ forloop.counter }}" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                    {% endif %}
-                </div>
+         </div>
+      </div>
+      <div class="col align-middle text-center">
+         <!-- The pictures corresponding to the item-->
+         <div class="row">
+            <!-- Boothstrap Carousal Control -->
+            {% comment %} https://getbootstrap.com/docs/4.0/components/carousel/ {% endcomment %}
+            <div id="{{ forloop.counter }} project_carousel" class="carousel slide" data-interval="false">
+               <style>
+                  .carousel-control-next-icon,
+                  .carousel-control-prev-icon {
+                  background-color: black;
+                  border-radius: 10px;
+                  }
+                  .carousel-indicators {
+                  background-color: #000000e6;
+                  overflow: hidden;
+                  height: 10px;
+                  border-radius: 4px;
+                  width: fit-content;
+                  border-top: groove;
+                  border-top-color: black;
+                  margin: 0 auto;
+                  }
+               </style>
+               <div class="carousel-inner {{ forloop.counter }}" style="">
+                  {% for pic in pid.proj_pics.all %}
+                  <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                     <img class="d-block w-100" src="{% if pic is not None and pic.images is not None %}{{pic.images.url}}{% else %}{% static 'mysite/imagenotfound.png' %}{% endif %}" class="img-fluid" alt="" style="height: 500px; border: 2px solid black; border-radius: 15px; object-fit: contain;">
+                  </div>
+                  {% endfor %}
+               </div>
+               {% if pid.proj_pics.count != 1 %}
+               <ol class="carousel-indicators {{ forloop.counter }}">
+                  {% for pic in pid.proj_pics.all %}
+                  <li data-target="#{{ forloop.counter }} project_carousel" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %} class="active" {% endif %}></li>
+                  {% endfor %}
+               </ol>
+               <a class="carousel-control-prev {{ forloop.counter }}" href="#{{ forloop.counter }} project_carousel" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon {{ forloop.counter }}" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#{{ forloop.counter }} project_carousel" role="button" data-slide="next">
+               <span class="carousel-control-next-icon {{ forloop.counter }}" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+               </a>
+               {% endif %}
             </div>
-        </div>
-    </div>
-    {% endfor %}
+         </div>
+      </div>
+   </div>
+   {% endfor %}
 </div>
+
 {% endblock %}

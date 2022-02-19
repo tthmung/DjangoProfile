@@ -4,44 +4,42 @@
 
 <!-- Add icon library -->
 <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
-
 <style>
-    #contact_icon {
-        color: black;
-    }
-
-    .contact_link:hover {
-        background-color: None;
-    }
-    .jumbotron {
-        background: rgba(204, 204, 204, 0.2);
-    }
+   #contact_icon {
+   color: black;
+   }
+   .contact_link:hover {
+   background-color: None;
+   }
+   .jumbotron {
+   background: rgba(204, 204, 204, 0.2);
+   }
 </style>
-
 <!-- Contact, special font from htmlcolorcodes.com, and icons from fontawesomeness-->
 <div class="bg-image" style=" background-image: url('{% static 'mysite/field-sunset.jpg' %}'); background-repeat: no-repeat; background-size: cover; height: 100vh;">
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100vh">
-    <div class="h-100 w-100 d-flex justify-content-center align-items-center">
-        <div class="jumbotron my-auto">
-          <h1 class="text-black display-3 mb-0">🆃🅷🅰🆆🅽🅶 🅷🅼🆄🅽🅶</h1>
-            <div class="g-start-2 " style="font-size: 60px; text-align: center;">
-                <!-- link to education gmail-->
-                <a class="contact_link" href="mailto: tthmung@mtu.edu">
-                    <i id="contact_icon" class="fas fa-envelope-square"></i>
-                </a>
-                <!-- Link to profile on linkedin-->
-                <a class="contact_link" href="https://www.linkedin.com/in/thawng-hmung">
-                    <i id="contact_icon" class = "fab fa-linkedin"></i>
-                </a>
-                <!-- Link to profile on github-->
-                <a class="contact_link" href="https://github.com/tthmung">
-                    <i id="contact_icon" class="fab fa-github-square"></i>
-                </a>
-          </div>
-        </div>
-    </div>
-  </div>
+   <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100vh">
+      <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+         <div class="jumbotron my-auto">
+            <h1 class="display-4 mb-0" style="color:lightgray;">🆃🅷🅰🆆🅽🅶 🅷🅼🆄🅽🅶</h1>
+            <div class="g-start-2" style="font-size: 60px; text-align: center;">
+               <!-- link to education gmail-->
+               <a class="contact_link" href="mailto: tthmung@mtu.edu">
+               <i id="contact_icon" class="fas fa-envelope-square"></i>
+               </a>
+               <!-- Link to profile on linkedin-->
+               <a class="contact_link" href="https://www.linkedin.com/in/thawng-hmung">
+               <i id="contact_icon" class = "fab fa-linkedin"></i>
+               </a>
+               <!-- Link to profile on github-->
+               <a class="contact_link" href="https://github.com/tthmung">
+               <i id="contact_icon" class="fab fa-github-square"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
 <!-- Background image -->
+
 
 {% endblock %}
