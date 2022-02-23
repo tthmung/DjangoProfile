@@ -4,5 +4,5 @@ from .models import *
 
 # Create your views here.
 def experience(request):
-    items = experienceList.objects.all()
+    items = experienceList.objects.all().order_by('-date')
     return render(request, "work.html", {"items": items})

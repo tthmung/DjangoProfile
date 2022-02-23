@@ -7,7 +7,7 @@ def home(request):
     return render(request, "home.html")
 
 def project(request):
-    post = ProjectList.objects.all()
+    post = ProjectList.objects.all().order_by('-date')
     return render(request, "project.html", {"post": post})
 
 def contact(request):

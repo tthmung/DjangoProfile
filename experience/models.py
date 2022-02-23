@@ -22,6 +22,8 @@ class experienceList(models.Model):
     # Date of job termination
     date_ended = models.CharField(max_length=200)
 
+    date = models.DateField(auto_now_add=False)
+
     @property
     def exp_item_picture(self):
         return self.exp_pics.first().pictures
