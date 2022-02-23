@@ -18,7 +18,7 @@
          <div class="row">
             <!-- Boothstrap Carousal Control -->
             {% comment %} https://getbootstrap.com/docs/4.0/components/carousel/ {% endcomment %}
-            <div id="{{ forloop.counter }} project_carousel" class="carousel slide" data-interval="false">
+            <div id="{{ forloop.counter }} project_carousel" class="carousel slide" data-interval="false" style="min-width: 200px;">
                <style>
                   .carousel-control-next-icon,
                   .carousel-control-prev-icon {
@@ -39,7 +39,7 @@
                <div class="carousel-inner {{ forloop.counter }}" style="">
                   {% for pic in pid.proj_pics.all %}
                   <div class="carousel-item{% if forloop.first %} active{% endif %}">
-                     <img class="d-block w-100" src="{% if pic is not None and pic.images is not None %}{{pic.images.url}}{% else %}{% static 'mysite/imagenotfound.png' %}{% endif %}" class="img-fluid" alt="" style="height: 500px; border: 2px solid black; border-radius: 15px; object-fit: contain;">
+                     <img class="d-block w-100" src="{% if pic is not None and pic.images is not None %}{{pic.images.url}}{% else %}{% static 'mysite/imagenotfound.png' %}{% endif %}" class="img-fluid" alt="" style="height: 500px; width: 600px!important; max-width: 100%; border: 2px solid black; border-radius: 15px; object-fit: contain;">
                   </div>
                   {% endfor %}
                </div>

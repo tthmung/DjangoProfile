@@ -19,7 +19,7 @@
          <div class="row">
             <!-- Boothstrap Carousal Control -->
             {% comment %} https://getbootstrap.com/docs/4.0/components/carousel/ {% endcomment %}
-            <div id="{{ forloop.counter }} experience_carousel" class="carousel slide" data-interval="false">
+            <div id="{{ forloop.counter }} experience_carousel" class="carousel slide" data-interval="false" style="min-width: 200px">
                <style>
                   .carousel-control-next-icon,
                   .carousel-control-prev-icon {
@@ -40,11 +40,12 @@
                   .carousel-indicators li {
                   height: 4px;
                   }
+
                </style>
                <div class="carousel-inner {{ forloop.counter }}" style="">
                   {% for img in item.exp_pics.all %}
                   <div class=" carousel-item {% if forloop.first %} active{% endif %}">
-                     <img class="d-block w-100" src="{% if img is not None and img.pictures is not None %}{{img.pictures.url}}{% else %}{% static 'mysite/imagenotfound.png' %}{% endif %}" class="img-fluid" alt="" style="height: 500px; border: 2px solid black; border-radius: 15px; object-fit: contain;">
+                     <img class="d-block w-100" src="{% if img is not None and img.pictures is not None %}{{img.pictures.url}}{% else %}{% static 'mysite/imagenotfound.png' %}{% endif %}" class="img-fluid" alt="" style="height: 500px; width: 600px!important; max-width: 100%; border: 2px solid black; border-radius: 15px; object-fit: contain;">
                   </div>
                   {% endfor %}
                </div>
