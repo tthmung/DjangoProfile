@@ -12,8 +12,7 @@ Using Django Framework, I created a simple website. On the front-end I use Boots
 
 * Project can be forked from this page, and the user will have to create personal .env file.
 * Any images that the program uses will need to be change.
-* User will also need to have python3 and pip3 install in devices. Also user will need all the dependency listed in the requirement.txt
-stall -r requirement.txt.
+* User will also need to have python3 and pip3 install in devices. Also user will need all the dependency listed in the requirement.txt.
 ```
 pip3 install -r requirement.txt
 ```
