@@ -7,7 +7,11 @@ class projectImaginAdmin(admin.StackedInline):
 
 
 class projectAdmin(admin.ModelAdmin):
-    fields = ["project_name", "project_detail"]
+    fields = [
+        "project_name",
+        "date",
+        "project_detail",
+    ]
 
     inlines = [projectImaginAdmin]
 

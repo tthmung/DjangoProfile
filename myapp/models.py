@@ -13,6 +13,8 @@ class ProjectList(models.Model):
     # Textfield containing overview of the project
     project_detail = models.TextField()
 
+    date = models.DateField(auto_now_add=False)
+
     @property
     def item_picture(self):
         return self.proj_pics.first().images

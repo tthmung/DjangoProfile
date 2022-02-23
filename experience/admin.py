@@ -9,6 +9,7 @@ class experienceAdmin(admin.ModelAdmin):
         "company_name",
         "position_name",
         "date_started",
+        "date",
         "date_ended",
         "position_detail",
     ]
