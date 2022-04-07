@@ -44,11 +44,6 @@
                   {% endfor %}
                </div>
                {% if pid.proj_pics.count != 1 %}
-               <ol class="carousel-indicators {{ forloop.counter }}">
-                  {% for pic in pid.proj_pics.all %}
-                  <li data-target="#{{ forloop.counter }} project_carousel" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %} class="active" {% endif %}></li>
-                  {% endfor %}
-               </ol>
                <a class="carousel-control-prev {{ forloop.counter }}" href="#{{ forloop.counter }} project_carousel" role="button" data-slide="prev">
                <span class="carousel-control-prev-icon {{ forloop.counter }}" aria-hidden="true"></span>
                <span class="sr-only">Previous</span>
