@@ -4,7 +4,7 @@ A simple profile website to showcase a little about me.
 
 ## Description
 
-Using Django Framework, I created a simple website. On the front-end I use Bootstrap, to make customizing the pages as smooth as possible. For the domain it uses namecheap, and for the server I use Amazon Lightsail along with Nginx. The website can be reach at this link: https://www.tthmung.xyz
+Using Django Framework, I created a simple website. On the front-end I use Bootstrap, to make customizing the pages as smooth as possible. For the domain it uses namecheap, and for the server I use Amazon Lightsail along with Nginx. The website can be reach at this link: https://www.tthmung.xyz/
 
 ## Getting Started
 
