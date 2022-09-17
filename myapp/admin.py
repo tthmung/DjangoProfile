@@ -10,6 +10,7 @@ class projectAdmin(admin.ModelAdmin):
     fields = [
         "project_name",
         "date",
+        "url",
         "project_detail",
     ]
 

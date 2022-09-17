@@ -7,10 +7,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path("project/", views.project, name="project"),
     path("", views.home, name="home"),
-    path("about/", views.about, name="about"),
-    path("contact/", views.contact, name="contact"),
-    path("termofservice/", views.termofservice, name="termofservice"),
-    path("privacy/", views.privacy, name="privacy"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
