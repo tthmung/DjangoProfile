@@ -13,7 +13,15 @@ class ProjectList(models.Model):
     # Textfield containing overview of the project
     project_detail = models.TextField()
 
+    # URL field for some project that can can acesses by url
+    url = models.URLField(max_length=200, default="");
+
+    # Simple date to change order of the data
     date = models.DateField(auto_now_add=False)
+
+    @property
+    def has_url(self):
+        return self.url is not None and self.url != ""
 
     @property
     def item_picture(self):

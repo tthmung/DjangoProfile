@@ -9,16 +9,3 @@ def home(request):
 def project(request):
     post = ProjectList.objects.all().order_by('-date')
     return render(request, "project.html", {"post": post})
-
-def contact(request):
-    return render(request, "contact.html")
-
-
-def about(request):
-    return render(request, "about.html")
-
-def termofservice(request):
-    return render(request, "termofservice.html")
-
-def privacy(request):
-    return render(request, "privacy.html")
