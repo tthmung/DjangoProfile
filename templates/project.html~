@@ -65,7 +65,7 @@
         <div class="d-sm-flex justify-content-around align-items-center px-sm-5 c-items my-sm-3 my-1">
             <!-- The item description -->
             <div class="mr-sm-5 text-field">
-                <h2>{{ pid.project_name }}
+                <h1>{{ pid.project_name }}
                     <span>
                         {% if pid.has_url %}
                         <a href="{{pid.url}}" target="_blank" rel="noopener noreferrer">
@@ -79,7 +79,7 @@
                         </a>
                         {% endif %}
                     </span>
-                </h2>
+                </h1>
                 <p>{{ pid.project_detail }}</p>
             </div>
             <!-- The pictures corresponding to the item-->

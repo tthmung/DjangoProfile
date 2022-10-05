@@ -1,3 +1,4 @@
+from importlib.metadata import requires
 from django.db import models
 from django.contrib import admin, staticfiles
 from django.db.models.deletion import CASCADE
@@ -14,7 +15,7 @@ class ProjectList(models.Model):
     project_detail = models.TextField()
 
     # URL field for some project that can can acesses by url
-    url = models.URLField(max_length=200, default="");
+    url = models.URLField(max_length=200, default="", blank=True)
 
     # Simple date to change order of the data
     date = models.DateField(auto_now_add=False)
