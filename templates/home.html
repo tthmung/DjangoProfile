@@ -168,6 +168,7 @@
         .contents {
             gap: 0;
             margin: 0 auto 0;
+            width: 100%;
         }
 
         p {
@@ -175,12 +176,8 @@
             font-size: medium !important;
         }
 
-        .content {
-            max-width: 600px;
-        }
-
-        .carousel {
-            max-width: 450px;
+        .content, .carousel {
+            width: 95%;
         }
 
         .content-title {
@@ -241,20 +238,15 @@
         </div>
     </div>
     <div class="contents">
-        <div class="content about1">
-            <p class="fs-2 text-break fw-semibold mx-sm-4 mx-2">
-                I’m Thawng Hmung, a software developer currently attending Michigan
-                Technological University. Majoring in Computer Science and minor in Mathemtical science.</p>
-            <img src="{% static 'mysite/IMG_1051.JPG' %}" class="content-img mx-sm-5" />
-        </div>
         <div class="content mb-sm-5 about2">
-            <p class="fs-2 text-break fw-semibold mx-sm-5 mx-3">
-                I usually spend my free time watching or playing soccer. Tennis is another sport that I enjoy playing.
-                I also love to travel and would often plan trips with my friends. At home I would normally play video
-                games and
-                if I'm feeling espcially productive I would work on my unfinish projects.
-            </p>
+            <div>
+                <p class="fs-3 text-break mx-sm-5 mx-3">
+                    I’m Thawng Hmung, a software developer currently attending Michigan Technological University. I major in Computer Science and minor in Mathemtical science.</p>
 
+                <p class="fs-3 text-break mx-sm-5 mx-3">
+                    In my free time, outdoor I enjoy soccer and tennis. I am also a big fan of video games. Hanging out with friends and doing these activities make me an overall person.
+                </p>
+            </div>
             <div id="h-carousel" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators" style="bottom: 0;">
                     <button type="button" id="h-buttom" data-bs-target="#h-carousel" data-bs-slide-to="0" class="active"
@@ -265,19 +257,25 @@
                         aria-label="Slide 3"></button>
                     <button type="button" id="h-buttom" data-bs-target="#h-carousel" data-bs-slide-to="3"
                         aria-label="Slide 4"></button>
-                </div>
+                        <button type="button" id="h-buttom" data-bs-target="#h-carousel" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    </div>
                 <div class="carousel-inner" id="c-inner">
                     <div class="carousel-item active">
-                        <img id="c_img" src="{% static 'mysite/group.jpg' %}" class="d-block img-fluid" alt="...">
+                        <img id="c_img" src="{% static 'mysite/IMG_1051.jpg' %}" class="d-block img-fluid" alt="...">
                     </div>
+
                     <div class="carousel-item">
-                        <img id="c_img" src="{% static 'mysite/IMG_4678.JPG' %}" class="d-block img-fluid" alt="...">
+                        <img id="c_img" src="{% static 'mysite/group.jpg' %}" class="d-block img-fluid" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img id="c_img" src="{% static 'mysite/IMG_0289.jpg' %}" class="d-block img-fluid" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img id="c_img" src="{% static 'mysite/IMG_0685.JPG' %}" class="d-block img-fluid" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img id="c_img" src="{% static 'mysite/IMG_4678.JPG' %}" class="d-block img-fluid" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#h-carousel" data-bs-slide="prev">
