@@ -58,9 +58,7 @@
     .contents {
         position: relative;
         z-index: 1000;
-        display: grid;
-        gap: 4em;
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
     }
 
 
@@ -169,6 +167,7 @@
             gap: 0;
             margin: 0 auto 0;
             width: 100%;
+            justify-content: center;
         }
 
         p {
@@ -178,6 +177,7 @@
 
         .content, .carousel {
             width: 95%;
+            justify-content: center;
         }
 
         .content-title {
@@ -262,7 +262,7 @@
                     </div>
                 <div class="carousel-inner" id="c-inner">
                     <div class="carousel-item active">
-                        <img id="c_img" src="{% static 'mysite/IMG_1051.jpg' %}" class="d-block img-fluid" alt="...">
+                        <img id="c_img" src="{% static 'mysite/IMG_1051.JPG' %}" class="d-block img-fluid" alt="...">
                     </div>
 
                     <div class="carousel-item">

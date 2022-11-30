@@ -3,7 +3,7 @@ from DjangoProfile.settings.base import *
 # Override base.py settings here
 DEBUG = False
 
-ALLOWED_HOSTS = ["3.132.144.12", "tthmung.xyz", "www.tthmung.xyz", "localhost"]
+ALLOWED_HOSTS = ["3.136.245.249", "tthmung.com", "www.tthmung.com", "localhost"]
 
 # Production only
 
