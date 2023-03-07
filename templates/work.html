@@ -78,7 +78,7 @@
                     <div class="carousel-inner" style="width: 400px;">
                         {% for img in item.exp_pics.all %}
                         <div class=" carousel-item {% if forloop.first %} active{% endif %}">
-                            <img class="d-block w-100"
+                            <img class="d-block w-100"z
                                 src="{% if img is not None and img.pictures is not None %}{{img.pictures.url}}{% else %}{% static 'mysite/imagenotfound.png' %}{% endif %}"
                                 class="img-fluid" alt=""
                                 style="height: 400px; border: 1px solid black; border-radius: 20px; object-fit: contain;">
